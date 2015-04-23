@@ -32,6 +32,11 @@ public class Main {
         return ourSessionFactory.openSession();
     }
 
+
+    /*
+     *comentario
+     */
+
     public static void main(final String[] args) throws Exception {
         final Session session = getSession();
         try {
