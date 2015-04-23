@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ISSS@localhost" uuid="d3511672-8644-4ce2-832d-b57125ac17ca">
+    <database-info product="MySQL" version="5.5.42-1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="ISSS"/>
+    <table name="CIE9" schema="" catalog="ISSS" type="TABLE">
+      <column name="idProcedimiento" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Nombre" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Descripcion" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idProcedimiento"/>
+      <exported-key name="Cirujia_ibfk_1" table="Cirujia" schema="" catalog="ISSS" columns="fk_Cie9"/>
+    </table>
+    <table name="Cirujano" schema="" catalog="ISSS" type="TABLE">
+      <column name="idCirujano" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Nombres" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Apellidos" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="fk_Especiadlidades" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="fk_Horarios" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Meta" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Realizadas" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Suspendidas" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Activo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idCirujano"/>
+      <foreign-key name="Cirujano_ibfk_1" columns="fk_Especiadlidades" ref-table="Especialidad" ref-schema="" ref-catalog="ISSS" ref-columns="idEspecialidad" update-rule="0" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Cirujano_ibfk_2" columns="fk_Horarios" ref-table="Horario" ref-schema="" ref-catalog="ISSS" ref-columns="idHorario" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="Metas_ibfk_1" table="Metas" schema="" catalog="ISSS" columns="fk_Cirujano"/>
+      <index name="fk_Especialidad_idx" unique="false" columns="fk_Especiadlidades"/>
+      <index name="fk_Horarios_idx" unique="false" columns="fk_Horarios"/>
+    </table>
+    <table name="Cirujia" schema="" catalog="ISSS" type="TABLE">
+      <column name="idCirujia" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Fecha" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="fk_Paciente" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="fk_Cie9" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="DiagnosticoPostoperatorio" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Region" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TipoAnestecia" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Anestesista" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="fk_Quirofano" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="fk_Cirujano" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Emergencia" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="fk_Riesgo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idCirujia"/>
+      <foreign-key name="Cirujia_ibfk_1" columns="fk_Cie9" ref-table="CIE9" ref-schema="" ref-catalog="ISSS" ref-columns="idProcedimiento" update-rule="0" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Cirujia_ibfk_2" columns="fk_Paciente" ref-table="Paciente" ref-schema="" ref-catalog="ISSS" ref-columns="idPaciente" update-rule="0" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Cirujia_ibfk_3" columns="fk_Quirofano" ref-table="Quirofano" ref-schema="" ref-catalog="ISSS" ref-columns="idQuirofano" update-rule="0" delete-rule="3" deferrability="2"/>
+      <index name="fk_Cie9_idx" unique="false" columns="fk_Cie9"/>
+      <index name="fk_Cirujano_idx" unique="false" columns="fk_Cirujano"/>
+      <index name="fk_Paciente_idx" unique="false" columns="fk_Paciente"/>
+      <index name="fk_Quirofano_idx" unique="false" columns="fk_Quirofano"/>
+      <index name="fk_Riesgo_idx" unique="false" columns="fk_Riesgo"/>
+    </table>
+    <table name="Especialidad" schema="" catalog="ISSS" type="TABLE">
+      <column name="idEspecialidad" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Especialidad" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idEspecialidad"/>
+      <exported-key name="Cirujano_ibfk_1" table="Cirujano" schema="" catalog="ISSS" columns="fk_Especiadlidades"/>
+    </table>
+    <table name="Horario" schema="" catalog="ISSS" type="TABLE">
+      <column name="idHorario" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Entrada" sqlType="TIME" precision="8" scale="0" nullable="false" jdbcType="92"/>
+      <column name="Salida" sqlType="TIME" precision="8" scale="0" nullable="false" jdbcType="92"/>
+      <primary-key name="PRIMARY" columns="idHorario"/>
+      <exported-key name="Cirujano_ibfk_2" table="Cirujano" schema="" catalog="ISSS" columns="fk_Horarios"/>
+    </table>
+    <table name="Metas" schema="" catalog="ISSS" type="TABLE">
+      <column name="idMetas" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Mes" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Meta" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="fk_Cirujano" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idMetas"/>
+      <foreign-key name="Metas_ibfk_1" columns="fk_Cirujano" ref-table="Cirujano" ref-schema="" ref-catalog="ISSS" ref-columns="idCirujano" update-rule="0" delete-rule="3" deferrability="2"/>
+      <index name="fk_Cirujano_idx" unique="false" columns="fk_Cirujano"/>
+    </table>
+    <table name="Paciente" schema="" catalog="ISSS" type="TABLE">
+      <column name="idPaciente" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Nombres" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Apellidos" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Edad" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Sexo" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="Estado Civil" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="Calidad Asegurado" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idPaciente"/>
+      <exported-key name="Cirujia_ibfk_2" table="Cirujia" schema="" catalog="ISSS" columns="fk_Paciente"/>
+    </table>
+    <table name="Quirofano" schema="" catalog="ISSS" type="TABLE">
+      <column name="idQuirofano" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Descripcion" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idQuirofano"/>
+      <exported-key name="Cirujia_ibfk_3" table="Cirujia" schema="" catalog="ISSS" columns="fk_Quirofano"/>
+    </table>
+    <table name="Riesgo" schema="" catalog="ISSS" type="TABLE">
+      <column name="idRiesgo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Nombre" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idRiesgo"/>
+    </table>
+  </data-source>
+</component>

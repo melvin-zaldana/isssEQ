@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/ISSS</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping class="mapping.Cie9Entity"/>
+        <mapping class="mapping.CirujanoEntity"/>
+        <mapping class="mapping.CirujiaEntity"/>
+        <mapping class="mapping.EspecialidadEntity"/>
+        <mapping class="mapping.HorarioEntity"/>
+        <mapping class="mapping.MetasEntity"/>
+        <mapping class="mapping.PacienteEntity"/>
+        <mapping class="mapping.QuirofanoEntity"/>
+        <mapping class="mapping.RiesgoEntity"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
