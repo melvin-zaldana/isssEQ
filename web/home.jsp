@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: zaldana
@@ -8,6 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+  <link type="text/css" rel="stylesheet" href="<c:url value="/css/home.css"/>" />
     <title>Sistema de Captación de Datos Estadisticos de la Sala de Operaciones | ISSS Santa Ana | isssEQ</title>
 </head>
 <body>
