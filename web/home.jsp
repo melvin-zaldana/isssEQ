@@ -16,7 +16,9 @@
 <h1>SISTEMA DE CAPTACION DE DATOS ESTADISTICOS</h1>
 <h2>SALA DE OPERACIONES | Hospital Regional ISSS Santa Ana</h2>
 <h2>isssEQ</h2>
+<form>
 
-
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+  </form>
 </body>
 </html>
