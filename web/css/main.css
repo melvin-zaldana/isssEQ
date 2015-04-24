@@ -1,0 +1,19 @@
+#titulo {
+    text-align:center;
+    padding:5px;
+}
+#correlativo{
+    text-align: right;
+    padding: 10px;
+    float:left;
+}
+#paciente{
+    text-align: left;
+    padding: 5px;
+    float: left;
+}
+#cirujia{
+    text-align: left;
+    padding: 5px;
+    float: left;
+}
