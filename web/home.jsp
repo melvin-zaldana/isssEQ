@@ -26,8 +26,8 @@
 
 
     <div class="buttons">
-      <a class="flask" href=""><img src="css/media/flask4.png" /></a>
-      <a class="heartbeat" href=""><img src="css/media/heartbeat3.png" /></a>
+      <a class="flask" href=""><img src="css/media/folder.png" /></a>
+      <a class="heartbeat" href=""><img src="css/media/menu.png" /></a>
       <a class="scissors" href=""><img src="css/media/scissors7.png" /></a>
 
     </div>
