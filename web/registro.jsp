@@ -15,6 +15,38 @@
 <div id="titulo">
   <h1>Registro de Operaciones Quirurgicas</h1>
 </div>
+<div id="correlativo">
+    <div id="paciente">
+      <div id="uno">
+        <div id="fecha"></div>
+        <div id="hora"></div>
+        <div id="afiliacion"></div>
+      </div>
+      <div id="nombre"></div>
+      <div id="tres">
+        <div id="sexo"></div>
+        <div id="edad"></div>
+        <div id="estado_civil"></div>
+        <div id="calidad_asociado"></div>
+      </div>
+    </div>
+
+    <div id="cirujia">
+      <div id="cuatro">
+        <div id="riesgo"></div>
+        <div id="clase_intervencion"></div>
+      </div>
+      <div id="cinco">
+        <div id="diagnostico_post"></div>
+      </div>
+      <div id="seis">
+        <div id="region"></div>
+        <div id="tipo_anestecia"></div>
+      </div>
+      <div id="cirujano"></div>
+      <div id="ayudante"></div>
+    </div>
+</div>
 
 
 </body>
