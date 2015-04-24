@@ -37,7 +37,7 @@
         <div id="clase_intervencion"></div>
       </div>
       <div id="cinco">
-        <div id="diagnostico_post"></div>
+        <div id="diagnostico_post-ope"></div>
       </div>
       <div id="seis">
         <div id="region"></div>
