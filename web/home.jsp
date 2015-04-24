@@ -13,12 +13,27 @@
     <title>Sistema de Captación de Datos Estadisticos de la Sala de Operaciones | ISSS Santa Ana | isssEQ</title>
 </head>
 <body>
-<h1>SISTEMA DE CAPTACION DE DATOS ESTADISTICOS</h1>
-<h2>SALA DE OPERACIONES | Hospital Regional ISSS Santa Ana</h2>
-<h2>isssEQ</h2>
-<form>
+<div id="content-main">
+  <div id="content">
 
-<button type="button" onclick="alert('Hello World!')">Click Me!</button>
-  </form>
+    <h2>SALA DE OPERACIONES | Hospital Regional ISSS Santa Ana</h2>
+    <hr id="header-line"/>
+    <h1>SISTEMA DE CAPTACION DE DATOS ESTADISTICOS</h1>
+    <hr class="line">
+    <img id="icon" src="css/media/hospitals3.png"/>
+    <hr id="line2">
+    <h3>isssEQ</h3>
+
+
+    <div class="buttons">
+      <a class="flask" href=""><img src="css/media/flask4.png" /></a>
+      <a class="heartbeat" href=""><img src="css/media/heartbeat3.png" /></a>
+      <a class="scissors" href=""><img src="css/media/scissors7.png" /></a>
+
+    </div>
+  </div>
+
+
+</div>
 </body>
 </html>
