@@ -16,7 +16,8 @@ public class IsssEQController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String registro(ModelMap model){
-        model.addAttribute("att", "att");
+        model.addAttribute("att", "Registro Operaciones");
         return "registro";
     }
+
 }
