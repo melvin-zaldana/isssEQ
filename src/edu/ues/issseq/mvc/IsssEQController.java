@@ -13,20 +13,18 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 
 @Controller
-@RequestMapping("/")
 public class IsssEQController {
-
-
-
-
 
     @RequestMapping(method = RequestMethod.GET)
     public String registro(ModelMap model){
         model.addAttribute("att", "Registro Operaciones");
-        return "registro";
+        return "redfgistro";
     }
 
-
+    @RequestMapping(value = "/registro",method = RequestMethod.GET)
+    public String sdf(ModelMap model){
+        return "registro";
+    }
 
 
 }
