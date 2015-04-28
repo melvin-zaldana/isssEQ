@@ -51,6 +51,7 @@
     </div>
 </div>
 <div id="menu_inferior">
+
   <%--<%@include file="menu_inferoir.jspf"%>--%>
 </div>
 
