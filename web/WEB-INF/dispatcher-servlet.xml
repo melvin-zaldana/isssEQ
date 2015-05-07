@@ -7,14 +7,20 @@
 
        <context:component-scan base-package="edu.ues.issseq.mvc"/>
 
+       <mvc:resources mapping="/css/**" location="/css/" />
+
        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-              <property name="prefix" value="/WEB-INF/"/>
+              <property name="prefix" value="/WEB-INF/pages/"/>
               <property name="suffix" value=".jsp"/>
 
        </bean>
 
-       <mvc:resources mapping="/css/**" location="/css/" />
 
-       <mvc:annotation-driven />
+
+
+       <!--<mvc:default-servlet-handler/>
+
+
+       <mvc:annotation-driven />-->
 
 </beans>
