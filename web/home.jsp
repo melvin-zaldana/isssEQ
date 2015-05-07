@@ -27,7 +27,7 @@
 
 
     <div class="buttons">
-      <a class="flask" href="registro.jsp"><img src="css/media/folder.png" /></a>
+      <a class="flask" href=""><img src="css/media/folder.png" /></a>
       <a class="heartbeat" href=""><img src="css/media/menu.png" /></a>
       <a class="scissors" href=""><img src="css/media/usuarios.png" /></a>
       <a class="scissors" href=""><img src="css/media/cafe.png" /></a>

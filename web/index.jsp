@@ -8,11 +8,36 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/home.css"/>
+    <title>Sistema de Captación de Datos Estadisticos de la Sala de Operaciones | ISSS Santa Ana | isssEQ</title>
   </head>
   <body>
 
-  <p>Prueba GitHub</p>
+
+  <div id="content-main">
+    <div id="content">
+
+      <h2>SALA DE OPERACIONES | Hospital Regional ISSS Santa Ana</h2>
+      <hr id="header-line"/>
+      <h1>SISTEMA DE CAPTACION DE DATOS ESTADISTICOS</h1>
+
+      <%--<img id="icon" src="css/media/hospitals3.png"/>--%>
+      <h3 id="isss"><img id="line" src="css/media/line.png"> isssEQ<img id="line2" src="css/media/line.png"></h3>
+
+
+
+
+      <div class="buttons">
+        <a class="flask" href=""><img src="css/media/folder.png" /></a>
+        <a class="heartbeat" href=""><img src="css/media/menu.png" /></a>
+        <a class="scissors" href=""><img src="css/media/usuarios.png" /></a>
+        <a class="scissors" href=""><img src="css/media/cafe.png" /></a>
+
+      </div>
+    </div>
+
+
+  </div>
 
   </body>
 </html>
